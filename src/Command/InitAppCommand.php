@@ -151,7 +151,7 @@ class InitAppCommand extends Command
         $people = new People();
         $people->setName($result['name']);
         $people->setGender($result['gender']);
-        $this->speciesUrls[] = array_merge($this->speciesUrls, $result['species']);
+        $this->speciesUrls = array_merge($this->speciesUrls, $result['species']);
 
         $em->persist($people);
     }
