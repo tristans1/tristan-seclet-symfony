@@ -18,8 +18,8 @@ class Planet
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(nullable: true)]
-    private ?int $population = null;
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $population = null;
 
     #[ORM\Column(nullable: true)]
     private ?int $diameter = null;
@@ -52,7 +52,7 @@ class Planet
         return $this->population;
     }
 
-    public function setPopulation(?int $population): self
+    public function setPopulation(?string $population): self
     {
         $this->population = $population;
 

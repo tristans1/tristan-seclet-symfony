@@ -18,8 +18,8 @@ class Starship
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(nullable: true)]
-    private ?int $capacity = null;
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $capacity = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $hyperdriveRating = null;
@@ -46,7 +46,7 @@ class Starship
         return $this->capacity;
     }
 
-    public function setCapacity(?int $capacity): self
+    public function setCapacity(?string $capacity): self
     {
         $this->capacity = $capacity;
 
